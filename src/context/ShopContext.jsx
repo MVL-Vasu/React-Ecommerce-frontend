@@ -33,7 +33,7 @@ const ShopContextProvider = (props) => {
      const GetAllProduct = async () => {
 
           try {
-               await fetch('http://localhost:3001/products/allproducts')
+               await fetch( api_paths.all_products)
                     .then((response) => response.json())
                     .then((data) => setall_product(data))
           } catch (err) {
